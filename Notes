@@ -1,0 +1,12 @@
+Compiler Just checks only syntax
+
+JVM is an abstract, it is not physically exist
+
+We have a machine to make java Platform independent we went for a virtual layer doesn't matter which machine u have JVM the idea is to have JVM on every machine
+
+Public - Public it is a access modifier, JVM should be able to call this method out side of the class
+Static- Creating Space, it is the 1st one to load, it allows to call without creating a object of a class in which a main method is defined
+Void- Doesn't return any value
+Main - Main method is static
+
+if the method is static no need of ref variable u can directly call that method like img1
