@@ -1,5 +1,6 @@
 Java can be used for mobile developement, Web developement and Enterprice developement
 
+file name and class name can be different but while compiling you should enter file name then it will create .class file of class name and u should run with the class name.(Compile with file name, Run with class name)
 
 Compiler Just checks only syntax
 
@@ -11,18 +12,85 @@ JDK,JRE,JVM (PPT\1.png){
 }
 
 Public Static Void Main (String args[]){
-    Public - Public it is a access modifier, JVM should be able to call this method out side of the class
-    Static- Creating Space, it is the 1st one to load, it allows to call without creating a object of a class in which a main method is defined
-    Void- Doesn't return any value
-    Main - Main method is static
+    Public - Public it is a access modifier, JVM should be able to call this method out side of the class.
+    Static- Creating Space, it is the 1st one to load, it allows to call without creating a object of a class in which a main method is defined.
+    Void- Doesn't return any value.
+    Main - Main method is static.
+    Main method is statcu because object is not created but still it is loaded
 
-    if the method is static no need of ref variable u can directly call that method like (Ref\1.png)
-    if you are making a non static method without reference u cannot access.So to make that happen we have to make a referece of that class and then  call the method with that referece that we created (Ref\2.png)
+    if the method is static no need of ref variable u can directly call that method like (Ref\1.png).
+    if you are making a non static method without reference u cannot access.So to make that happen we have to make a referece of that class and then  call the method with that referece that we created. (Ref\2.png)
 
-    String args[] is arguments that we pass in main method
-    args is just a name u acn keep anything there(Ref\3.png)
-    arguments passes in String type
-    args[] is a array type variable which we can call as object of string
-    We use this String args[] when we want to pass information, even if we dont want to pass information we should include because it is a part of syntax
+    String args[] is arguments that we pass in main method.
+    args is just a name u acn keep anything there. (Ref\3.png)
+    arguments passes in String type.
+    args[] is a array type variable which we can call as object of string.
+    We use this String args[] when we want to pass information, even if we dont want to pass information we should include because it is a part of syntax.
 }
+
+To see the source code u can enter javap (classname). (Ref\4.png)
+it is also called as java dissabmler.
+
+Check this. (PPT\2.png)
+
+In JVM you have 2 types of memory 1.Stack Memory(1st in-last out) 2.Heap Memory. (Ref\5.png) 
+Stack Store memory in Key(name of the variable) and Value(value of the variable). (Ref\6.png)
+Check this. (Ref\7.2.png)line20 is not object it is a referece variable.So when we say new Claculator it will create a new object inside the heap memory. 
+Local variables are a part of a Stack,Instace variables are a part of Heap.
+Even the add method also sotres in Heap(it actually sotres the definition of add), but the actuall area that add will consume is Stack Memory. (Ref\8.png) 
+And that address of the object that created in heap memory is stored in the front of obj. (Ref\9.png)
+So that we can say there is a link between stack and heap, it will search for the add
+
+Check this. (PPT\3.png)
+Check this. (PPT\4.png)
+Check this. (PPT\5.png)
+Check this. (PPT\6.png)
+
+Wrapper Classes means converting primitive into object and object into primitive{
+    int --> Integer
+    char --> Character
+    long --> Long
+    autoboxing-->primitive to object
+    unboxing --> object to primitive
+}
+
+We can change the value of static variable i.e it will take the updated value. (PPT\7.png)for ans check output only
+
+Datatypes (Ref\10.png)
+Character can be incremented by using integer (Ref\11.png)
+literals are the values that are given to the variables
+
+%
+    if the numerator is smaller than the denominator it will always give the value of numerator.
+
+Type Casting
+If it is happening automatically it is converting.
+Doing is Explicitly it is Casting.
+Implicit TypeConversion - Small to Big. 
+Explicit TypeCasting - Big to Small.
+We cannot store Character value into Boolean value, Because Boolean supports only True and False.
+From int to byte it will perform Modulus of that num by 256 and give remainder as output.
+Java supports type promotions i.e; it the result is out of byte it will promote it to integer. (Ref\12.png)
+Check this.(Ref\13.png) it behaves differently when u try to assign/fetch a value to it 
+
+Ternary Operator Check this(Ref\14.png)
+
+Switch Case:
+To not to use break statements we can use arrow or yelid (Ref\17.png)(Ref\16.png)
+Using switch case as expression (Ref\15.png)
+
+Check this (Ref\18.png).
+
+While loop loops till it returns false(while loops return ture or false)
+    it runs till the condition is false
+Do-While will always excecute once either the condition is true or false.
+    So if we want the loop to excecute atleast once then we can use this loop.
+    end the loop with semicolon(;).
+    in the do block u should include increment or decrement operator or else it will go to infinite loop.
+for
+    to use for loop as while loop u can use two semicolon's(Ref\19.png)
+
+if you know how many iteration you want to run then you can use For loop
+if you want to read a file or database u can use while loop.
+if u want the loop to run atleast once then u can use do while loop
 
