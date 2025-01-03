@@ -1,0 +1,28 @@
+Java can be used for mobile developement, Web developement and Enterprice developement
+
+
+Compiler Just checks only syntax
+
+JDK,JRE,JVM (PPT\1.png){
+    JVM is an abstract, it is not physically exist
+    Java is platform independent but JVM  is platform dependent
+
+    We have a machine to make java Platform independent we went for a virtual layer doesn't matter which machine u have JVM the idea is to have JVM on every machine
+}
+
+Public Static Void Main (String args[]){
+    Public - Public it is a access modifier, JVM should be able to call this method out side of the class
+    Static- Creating Space, it is the 1st one to load, it allows to call without creating a object of a class in which a main method is defined
+    Void- Doesn't return any value
+    Main - Main method is static
+
+    if the method is static no need of ref variable u can directly call that method like (Ref\1.png)
+    if you are making a non static method without reference u cannot access.So to make that happen we have to make a referece of that class and then  call the method with that referece that we created (Ref\2.png)
+
+    String args[] is arguments that we pass in main method
+    args is just a name u acn keep anything there(Ref\3.png)
+    arguments passes in String type
+    args[] is a array type variable which we can call as object of string
+    We use this String args[] when we want to pass information, even if we dont want to pass information we should include because it is a part of syntax
+}
+
