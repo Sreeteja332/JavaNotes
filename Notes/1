@@ -1,5 +1,30 @@
 Java can be used for mobile developement, Web developement and Enterprice developement
 
+Java is a strictly typed language.
+What kind of error will be thrown if the main method is not found in the Java program? Runtime Error
+
+Which subsystem of the JVM is responsible for loading class files? ClassLoader
+
+What kind of error will be thrown if the main method is not found in the Java program? Convestion of data from lower to higher data types.
+default value assigned to boolean is False.
+
+class Main{
+
+public static void main(String []args){
+
+char ch = 'a';
+
+char result = (char)(ch + 1);
+
+System.out.println(result);
+
+}
+
+}
+ans is b.
+
+What does a high-order bit represent for an integer?Sign of the integer
+
 file name and class name can be different but while compiling you should enter file name then it will create .class file of class name and u should run with the class name.(Compile with file name, Run with class name)
 
 Compiler Just checks only syntax
@@ -108,6 +133,105 @@ Length of array is defined whn it is created once created it is fixed we cannot 
 Check this (Ref\20.png)(Ref\21.png)(Ref\22.png)(Ref\23.png)(PPT\8.png)(PPT\9.png)(PPT\10.png)(PPT\11.png)(PPT\12.png)(PPT\13.png)(PPT\14.png)[(PPT\15.png)in second line"[[" means 2d array I means Integer ].
 Anonymus array Check this(Ref\24.png).
 
+What does arr[arr.length-1].length represents in a multidimensional array? length of last row in the array
+
+Jagged array(Ref\29.png)
+3D array(Ref\30.png)
+
+Array it is having fixedsize so to fix it u can craete new array of new length and copy that elements.
+
 System.in in Scanner line is standard input object 
 
+the new keyword allocate memory for an object during runtime in Java.
+
+We can overload main method also.
+
+What will happen if a local variable has the same name as an instance variable within a class? Local variable will hide the instance variable.
+
+ instance variables allocated in memory heap.
+
+
+
 Check this(Ref\25.png)(Ref\26.png)(Ref\27.png)(Ref\28.png)
+
+Math.random() method in Java returns a double value.
+Range: The returned value is a pseudorandom number between 0.0 (inclusive) and 1.0 (exclusive).
+
+String is a class So to create it we need to do something similar to object creation. String name= new String("HI"); but u can do the normal way also even that will create a object for u. 
+
+String constant pool where it stores same Strings like s1="Teja", s2="Teja" here it will not create a new objcet for u. it will use the address of s1. to save memory.
+but if u do s="Sree"; s=s+"Teja"; then will will create a new object and it will allocate new address to it and the old one will be removed by garbage collection after sometime.(Ref\31.png)
+
+Mutable means Changable
+Immutable means Unchangable
+
+Strings are Immutable
+but u can use String buffer and string builder classes to create a mutable string
+
+String buffer have 16bytes extra space even if u create a literal it will have 16+that literal size.(Ref\32.png)
+length and capacity are different
+we can convert string buffer to string using toString method.
+
+String buffer is thread safe, stringbuilder is not thread safe.
+
+Variable inside the method are local variable.
+Outside the method are instance variable.
+Static variable (outside method) if u want that value to be same for all then u can use static key word in fornt of that variable.
+(Ref\33.png)Here even we are changing the value of phone using on ref variable obj1 it is changing for both the obj's 
+Static variables should be called with the class name instead of obj u can call with the obj also but not adviced.
+In non static methods u can use static variables.
+
+Methods without static key word are called instance methods.
+When ever u wnat to work with a non static methods we need to create obj of it so we can call static method directly with the help of the class name.
+we can use static variable inside a static method but u cant use non static variable. because it will change for every variable and obj that we refernced to it.where as static variables are same.but we can use it if u have the object reference we can use it.(Ref\34.png)
+That is the reason why main method is static, if the main method is not static we have to create a obj of that class. but main method is the 1st execution part in the code so that's the deadlock here.
+
+Static Block{
+    Check this(Ref\35.png) in the out put it will print static 1st and constructor 2 times
+    every time u create a object it will load the class 1st and objects are instantiated.
+    the thing is class will be loaded once.
+    JVM will have a special area named class loader it will have all the classes loaded.So when the 1st obj created it will load the class 1st and then the obj is created.So every time u load a class it will call the static block(Class loads only once so static block is also called once.)   
+    if you dont create the obj it not not call the class as well.(didn't get)
+    but u can do it by using Class.forName("nameoftheclass i.e, mobile")
+}
+Encapsulation{
+    Privte key word used for a varible means it can be used only insde that class no one outside it cant use.
+    use getter and setter methods
+    So to access it we can create a new method and return that private vaariable in the same class then u can call that method and acess that using obj.
+    Check this(Ref\36.png)
+}
+
+this keyword{
+    this is a keyword that represents the current object.(current object means the object that is calling the method)(Ref\Demo.java)
+}
+
+Constructor{
+    A constructor/Default Constructor looks like a method.
+    but no return type, name is same as class name[(Human) (capital)] also specify the access i.e, public.
+    even if u dont call it, it will be called.
+    Every time u create a object it will call the constructor.Even if there is no construtor created by u 
+    U can assign ur own default values.
+    Database connections are written in the constructor.
+    Parameterized Constructor means constructor having parameter that are comming form the obj creation. (Ref\D2.java)
+}
+Anonymous Object{
+    Objects without name. {new A();}
+    we cannot re-use them
+}
+
+Inhertence{
+    for inheritence u need a .class file not .java file.
+    Reason why java dosen't support multiple inheritence is because it let say we have 3 classes A,B,C C is child and A,B are parents let say if both A and B have same methods and now when u create a object and try to call the method the java will be confused becasue it dont know who's method to use.
+}
+
+Super and this methods{
+    by default every constructor will have super.
+    Super means call the constructor of the super class.
+    Every class in java extends Object class by default.
+    this will excute the constructor of the same class.
+    execution order this(),super();
+}
+
+Method Overriding{
+    same name, same parameters and same number of parameters but have differet behaviour.(Ref\D3.java)
+}
