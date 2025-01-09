@@ -4,8 +4,11 @@ Things to know{
     Methods of object class.
 }
 
+Things to remember{
+    (Ref\55.png) the output will be kick and bike class (absract class is not printed even the method is empty in the child class that is bike because child class methods are more imp than parent class.)
+}
 Intro{
-    Java can be used for mobile developement, Web developement and Enterprice developement
+    Java can be used for mobile developement, Web developement and Enterprice developement.
 
     Java is a strictly typed language.
 
@@ -13,9 +16,9 @@ Intro{
 
 Questions
 {
-    What kind of error will be thrown if the main method is not found in the Java program? Runtime Error
+    What kind of error will be thrown if the main method is not found in the Java program? Runtime Error.
 
-    Which subsystem of the JVM is responsible for loading class files? ClassLoader
+    Which subsystem of the JVM is responsible for loading class files? ClassLoader.
 
     What kind of error will be thrown if the main method is not found in the Java program? Convestion of data from lower to higher data types.
     
@@ -37,31 +40,33 @@ Questions
     }
     ans is b.
 
-    What does a high-order bit represent for an integer?Sign of the integer
+    What does a high-order bit represent for an integer?Sign of the integer.
 
     What will happen if a local variable has the same name as an instance variable within a class? Local variable will hide the instance variable.
 
-    (Ref\45.png)(Ref\Box.java)
+    (Ref\45.png)(Ref\Box.java).
 
-    (Ref\46.png)(Ref\Patient.java)
+    (Ref\46.png)(Ref\Patient.java).
+
+    (Ref\52.png)
 }
 
 Compiler{
-    file name and class name can be different but while compiling you should enter file name then it will create .class file of class name and u should run with the class name.(Compile with file name, Run with class name)
+    file name and class name can be different but while compiling you should enter file name then it will create .class file of class name and u should run with the class name.(Compile with file name, Run with class name).
 
-    Compiler Just checks only syntax
+    Compiler Just checks only syntax.
 }
 
 JDK,JRE,JVM (PPT\1.png){
-    JDK converts ur code to bite code
-    JVM runs the code
-    JVM and the extra libraries,in-built classes etc.. that we have used in our code combined called JRE(Java Run Time Environment)
-    JVM is a part of JRE
+    JDK converts ur code to bite code.
+    JVM runs the code.
+    JVM and the extra libraries,in-built classes etc.. that we have used in our code combined called JRE(Java Run Time Environment).
+    JVM is a part of JRE.
 
-    JVM is an abstract, it is not physically exist
-    Java is platform independent but JVM  is platform dependent
+    JVM is an abstract, it is not physically exist.
+    Java is platform independent but JVM  is platform dependent.
 
-    We have a machine to make java Platform independent we went for a virtual layer doesn't matter which machine u have JVM the idea is to have JVM on every machine
+    We have a machine to make java Platform independent we went for a virtual layer doesn't matter which machine u have JVM the idea is to have JVM on every machine.
 }
 
 Public Static Void Main (String args[]){
@@ -69,7 +74,7 @@ Public Static Void Main (String args[]){
     Static- Creating Space, it is the 1st one to load, it allows to call without creating a object of a class in which a main method is defined.
     Void- Doesn't return any value.
     Main - Main method is static.
-    Main method is statcu because object is not created but still it is loaded
+    Main method is statcu because object is not created but still it is loaded.
 
     if the method is static no need of ref variable u can directly call that method like (Ref\1.png).
     if you are making a non static method without reference u cannot access.So to make that happen we have to make a referece of that class and then  call the method with that referece that we created. (Ref\2.png)
@@ -94,7 +99,7 @@ Stack and Heap Memory{
     Local variables are a part of a Stack,Instace variables are a part of Heap.
     Even the add method also sotres in Heap(it actually sotres the definition of add), but the actuall area that add will consume is Stack Memory. (Ref\8.png) 
     And that address of the object that created in heap memory is stored in the front of obj. (Ref\9.png)
-    So that we can say there is a link between stack and heap, it will search for the add
+    So that we can say there is a link between stack and heap, it will search for the add.
 }
 
 Instance Varibles{
@@ -135,7 +140,7 @@ null{
 
 Points{
     Character can be incremented by using integer (Ref\11.png)
-    literals are the values that are given to the variables
+    literals are the values that are given to the variables.
 }
 
 % operator{
@@ -150,11 +155,11 @@ Type Casting{
     We cannot store Character value into Boolean value, Because Boolean supports only True and False.
     From int to byte it will perform Modulus of that num by 256 and give remainder as output.
     Java supports type promotions i.e; it the result is out of byte it will promote it to integer. (Ref\12.png)
-    Check this.(Ref\13.png) it behaves differently when u try to assign/fetch a value to it 
+    Check this.(Ref\13.png) it behaves differently when u try to assign/fetch a value to it.
 }
 
 Ternary Operator {
-    Check this(Ref\14.png)
+    Check this(Ref\14.png).
 }
 
 Switch Case:{
@@ -167,8 +172,8 @@ Post and Pre increment{
 }
 
 While loop{ 
-    loops till it returns false(while loops return ture or false)
-    it runs till the condition is false
+    loops till it returns false(while loops return ture or false).
+    it runs till the condition is false.
 }
 
 Do-While 
@@ -180,26 +185,21 @@ Do-While
 }
 
 for{
-    to use for loop as while loop u can use two semicolon's(Ref\19.png)
+    to use for loop as while loop u can use two semicolon's(Ref\19.png).
 }
 
 Which loop to use{
-    if you know how many iteration you want to run then you can use For loop
+    if you know how many iteration you want to run then you can use For loop.
     if you want to read a file or database u can use while loop.
-    if u want the loop to run atleast once then u can use do while loop
+    if u want the loop to run atleast once then u can use do while loop.
 }
 
 void{
-    void is used when ur  not expecting in return of that method
+    void is used when ur  not expecting in return of that method.
 }
 
 return{
-    if the codes see's return in any part of the code it will jump out out the code and return the value and it will stop the excecution of that method
-}
-
-Method overloading{
-    only parameter's should be diff, diff return type will not work.
-    We can overload main method also.
+    if the codes see's return in any part of the code it will jump out out the code and return the value and it will stop the excecution of that method.
 }
 
 Array{
@@ -318,26 +318,29 @@ Static Block{
     but u can do it by using Class.forName("nameoftheclass i.e, mobile")
 }
 
-Encapsulation{
-    Privte key word used for a varible means it can be used only insde that class no one outside it cant use.
-    use getter and setter methods
-    So to access it we can create a new method and return that private vaariable in the same class then u can call that method and acess that using obj.
-    Check this(Ref\36.png)
-}
-
-this keyword{
-    this is a keyword that represents the current object.(current object means the object that is calling the method)(Ref\Demo.java)
-}
-
 Constructor{
     A constructor/Default Constructor looks like a method.
+    Why default constructor is created to assign the default values to the instance variables of a class when an object is created.
     but no return type, name is same as class name[(Human) (capital)] also specify the access i.e, public.
     even if u dont call it, it will be called.
     Every time u create a object it will call the constructor.Even if there is no construtor created by u 
     U can assign ur own default values.
     Database connections are written in the constructor.
     Parameterized Constructor means constructor having parameter that are comming form the obj creation. (Ref\D2.java)
+    Check this(Ref\47.png)
+    (Ref\50.png) output of this is Democonstructor,0,null.
+    So even if we dont create a constructor it will create a default constructor and it will default values of that instance variables(from the above code if we comment user defined constructor the output will be 0,null)
+
 }
+
+this keyword{
+    this is a keyword that represents the current object.(current object means the object that is calling the method)(Ref\Demo.java)
+    Check this(Ref\48.png)(Ref\49.png)
+    Check this (Ref\Employee.java).
+    Check this(Ref\51.png) here the output is Yash. because here display(); the compiler is automatically adding this.display(); while invoking the method
+
+}
+
 Anonymous Object{
     Objects without name. {new A();}
     we cannot re-use them
@@ -346,9 +349,49 @@ Anonymous Object{
 Inhertence{
     for inheritence u need a .class file not .java file.
     Reason why java dosen't support multiple inheritence is because it let say we have 3 classes A,B,C C is child and A,B are parents let say if both A and B have same methods and now when u create a object and try to call the method the java will be confused becasue it dont know who's method to use.
+    Check this(PPT\27.png)(PPT\28.png)(PPT\29.png)(Ref\C.java)
+    Imp(PPT\30.png)
+    Tightly/Loosely coupled{
+        Suppose if there are any changes in the parent class or child class(since it is inherting the properties)it means total dependency is there between that 2 classes. SO if there is any modification is done the entrire thing would be disturbed.
+        tightly means total dependency is there between that 2 classes
+        So if we are making any applications they should be loosely couple
+    }
+    In inheritence u can acheive runtime Polymorphyism(Method Overriding).
 }
 
+Encapsulation{
+    Check this(PPT\31.png)
+    Privte key word used for a varible means it can be used only insde that class no one outside it cant use.
+    use getter and setter methods
+    So to access it we can create a new method and return that private vaariable in the same class then u can call that method and acess that using obj.
+    Check this(Ref\36.png)(Ref\53.png).
+    Making the class components robust(strong).
+}
+
+Polymorphyism{
+    Check this(PPT\32.png)(PPT\33.png)
+    Many behaviours.
+    Compile time(Early binding),Runtime(Late binding)
+    behaviour is defined at Compile time it is CT
+    behaviour defined at Runtime it is RT 
+    Overloading is a part of compiletime(which u decide based on ur parameter at the compile time itself)
+    Overriding is a part of  runtime (we are not sure which method we will call becasue both will have same parameters)
+    Method overloading{
+        only parameter's should be diff, diff return type will not work.
+        We can overload main method also.
+    }
+    
+    Method Overriding{
+        same name, same parameters and same number of parameters but have differet behaviour.(Ref\D3.java)
+        We can overload main method.(Ref\54.png)output is yashtechnologies
+    }
+}
+
+
 Super and this methods{
+    Check this(PPT\40.png)(Ref\59.png)
+    Check this(Ref\60.png)here the output is display method of class SD2 and then display method of class A
+    Check this(Ref\61.png)**** because by default super is there in every constructor 
     by default every constructor will have super.
     Super means call the constructor of the super class.
     Every class in java extends Object class by default.
@@ -356,15 +399,13 @@ Super and this methods{
     execution order this(),super();
 }
 
-Method Overriding{
-    same name, same parameters and same number of parameters but have differet behaviour.(Ref\D3.java)
-}
 
 Access Modifiers{
     public means it can be used anywhere
     private means it can be used inside the same class irrespective of the package
     Default means private protected
     Check this(Ref\37.png)
+    Check this(Ref\58.png)
     Points to remember{
         u cannot have 2 public classes in same file
         try to keep instance variables private 
@@ -374,14 +415,8 @@ Access Modifiers{
     }
 }
 
-Polymorphyism{
-    Many behaviours.
-    Compile time(Early binding),Runtime(Late binding)
-    behaviour is defined at Compile time it is CT
-    behaviour defined at Runtime it is RT 
-    Overloading us a part of compiletime(which u decide based on ur parameter at the compile time itself)
-    Overriding is a part of  runtime (we are not sure which method we will call becasue both will have same parameters)
-}
+
+
 
 Dynamic method Dispatch{
     U can have child objects for the parent variable.
@@ -421,17 +456,19 @@ Wrapper Classes{
 
 }
 
-Abstract{
-    if u want to just declare a method u should use abstract 
-    abstract method can belong only to abstract class
+Abstraction{
+    Check this(PPT\34.png)(PPT\35.png).
+    if u want to just declare a method u should use abstract. 
+    abstract method can belong only to abstract class.
     So after decalring the abstract method in the abstract classs now u will extend that class in another class and define that abstract method.
-    U cannot create an object of an abstract class
-    U can create a reference of a abstract class
+    U cannot create an object of an abstract class.
+    U can create a reference of a abstract class.
     if u wannt to create an object u have to use the child class where u have defined that abstract method.
     Abstract class need not have abstract method.
     But abstract methods can't be left unimplemented they should be implemented i.e, it is compulsory to define all the abstract methods(to make it work u have to make even the child class abstract,but then u cannot create object of abstract class )
     Non abstract classes are called concrete class.
     U can create object of contrete class but not abstract class.
+    Check this diff Encapsulation and Abstraction(PPT\36.png).
 }
 
 Inner Class{
@@ -448,8 +485,20 @@ Inner Class{
 Anonymous Inner Class{
     class without name.
     implementation is done after object creation there there wont be any name to that class so it is called anonymous class.
-    (Ref\D7.java)    here it will call the show() of the new implementation
+    (Ref\D7.java)    here it will call the show() of the new implementation.
     We can use anonymous inner class for abstract class as well.
     Check this(Ref\D8.java).
 }
 
+Interface{
+    Check this(PPT\37.png)
+    Code example(Ref\56.png)output is in demo class
+    Multiple inheritence can be acheived by Interface (Ref\57.png).
+    updates in java8,9(PPT\38.png)
+    diff btw abstract and Interface(PPT\39.png)
+
+}
+
+Aggregation{
+    Checkthis(Ref\62.png)(Ref\63.png)
+}
