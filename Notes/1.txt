@@ -49,6 +49,8 @@ Questions
     (Ref\46.png)(Ref\Patient.java).
 
     (Ref\52.png)
+
+    println belongs to which class? Ans PrintStream class
 }
 
 Compiler{
@@ -58,9 +60,15 @@ Compiler{
 }
 
 JDK,JRE,JVM (PPT\1.png){
+    To compile a code u need a tool that tool is JDK
     JDK converts ur code to bite code.
-    JVM runs the code.
+    U will write the java code  and compile it and run on machine(ie.JVM)
+    JVM is a machine which runs the code.
+    why we need a JVM? to make the java platform independent we went for a virual layer on top of it.
+    So most of the time ur code is dependent on some external files not the files that u have created, u might have used some in-built classes,libraries etc.
     JVM and the extra libraries,in-built classes etc.. that we have used in our code combined called JRE(Java Run Time Environment).
+    JRE is a Environment where you can run ur code. it also checks your byte code,validates.
+    but ultimately ur code will run on JVM.
     JVM is a part of JRE.
 
     JVM is an abstract, it is not physically exist.
@@ -117,6 +125,7 @@ Local Variables{
 }
 
 Static Varibles{
+    We can use them directly with the class name.variable name no need of creating the object.
     Check this. (PPT\6.png)
     We can change the value of static variable i.e it will take the updated value. (PPT\7.png)for ans check output only
 }
@@ -491,7 +500,17 @@ Anonymous Inner Class{
 }
 
 Interface{
-    Check this(PPT\37.png)
+    Interface is not a class.
+    Methods in Interface are public abstract.
+    u can create referece variables of interface but cannot create object for them.
+    U have to implement the methods in different class by impleting that interface.
+    Every variables that u create in interface are final and static.
+    Interface dont have own memory in heap,thats why we cannot create object. if we dont have memory how can we have non final variable(So the varibles in interface are final)
+    In class u can have multiple implements.
+    to extend one interface to another u should used extends keyword.
+    There are 3 Different Interfaces(Normal[2 or more methods in a interface],Functional/SAM(Single absract method)[1 method in interface,u can use @FunctionalInerface annotation to declare that interface as functional and then u cannot add more than one method],Marker[0 methods in interface])
+    (Ref\D14.java){Anonymus Inner class}
+    Check this(PPT\37.png)(Ref\D9.java)
     Code example(Ref\56.png)output is in demo class
     Multiple inheritence can be acheived by Interface (Ref\57.png).
     updates in java8,9(PPT\38.png)
@@ -499,6 +518,107 @@ Interface{
 
 }
 
+Enums{
+    enums are named constants which we create.
+    when you know that we have a specific error codes,or when you have a specific constants, which you want to use, instead of creating a different object by yourself, you can create a enum.
+    Of course you can create a class and you can create multiple objects of it.
+    Basic example(Ref\D10.java)
+    if else and switch(Ref\D12.java)(Ref\D13.java)
+}
+
+Annotations{
+    @override
+}
+
+Lambda Experssions{
+    it is a shortcut way to create small functions that you can pass around like any other piece of data.
+    Check this(Ref\D15.java)(Ref\D16.java)
+    It can be used only for funtional Interfaces.
+    it saves the amount of files which you create.
+    Of course the demo.java file will be quite heavy now,if you compare the file size before using Lambda expression,after using Lambda expression,the demo file size will increase,but it will not create a new file.
+    Okay, so less files to manage.
+}
+
+Exceptions{
+    Exceptions are something that u can handle,where errors(examples thread dead,IOError,Virtual Machine Error,Outofmemory) u cannot.
+    Compile time Exception(erros found after compiling)
+    Logical Time Exception()
+    Runtime Exception(excecution stops running)(for these we do Exception handling)
+    Runtime exceptions are unchecked exceptions(ur whish to handle or not)
+    SQLExcetions IO exceptions are checked exceptions(Must handle the exceptions)
+    Exceptions Hierachy Object->Throwable=>1.Error,2.Exceptions.
+    Try Catch{
+        (Ref\D17.java)
+        (Ref\D18.java)
+        if try is there there should be catch, but if u dont want to use catch u can use finally block also.
+        Finally{
+            irrespective of exception or not it will exceute this block
+            and used to close the resources,files,db etc..
+        }
+        Try with resources 
+    }
+    Throw{
+        it is used to throw an error 
+        (Ref\D19.java)
+        Custom Exeptions(Ref\D20.java)
+    }
+    Throws{
+        You know, when you work for the company,there are some employees that don't take responsibility of what went wrong.
+        They will simply say, hey, talk to my manager, right?So the same thing is happening here.
+        It says, hey, I'm not responsible to handle the exception,talk to my manager, which is main because main is calling show. So it is main's responsibility to handle the exception and that's why you can see we got an error here, it says unhandled exception.
+        Used for unchecked exceptions
+        Cannot throws exception to main method
+    }
+    Stacktrace{
+        Basically what it does is it prints the entire stack, which method is calling which method, and you can actually track the entire method calls so that you know because of which method the problem has been arised
+        you can see this is the entire stack.
+        So it's helpful to debug the application,
+    }
+}
+
+Threads{
+    It is actually dividing a task into parts.(Open task manager task have mutiple threads using)
+    Threads are the smallest unit that u can work with.
+    if u want to excecute 2 things at a time then U can use threads.
+    to make a class Thread extend Thread.
+    then that class sould have a method called run and then u should create a objcet of that class and using that ref variable call start ie obj.start() then it will call run automatically.
+    Check this(Ref\D21.java).
+    Scheduler it is some thing which tread will work for how much time and allocate the time to threads to work without flaws.
+    U can set priorities to the thread by using setPriority
+    to make the thread wait we can use sleep method in milli seconds (Ref\D22.java)
+
+}
+
+
 Aggregation{
     Checkthis(Ref\62.png)(Ref\63.png)
+}
+
+Serialization and Deserialization{
+    Serialization (Packing):
+        Takes a complex object (like clothes, toiletries, books)
+        Converts it into a simple format (neatly folded and packed items)
+        Stores it as a stream of bytes (your packed suitcase)
+        Can be saved to a file or sent over a network
+
+    Deserialization (Unpacking):
+        Takes the stream of bytes (your packed suitcase)
+        Reads and interprets the data
+        Reconstructs the original object (unpacked items back to original state)
+        Makes the object usable again in the program
+
+    Real-world analogy:
+        When you save a game, your character's state (position, health, inventory) is serialized
+        When you load the game later, this data is deserialized to restore your character
+
+    Key points:
+        Only objects that implement the Serializable interface can be serialized
+        The process maintains object relationships and inheritance
+
+    Useful for:
+        Saving program state to files
+        Sending objects over networks
+        Creating deep copies of objects
+        Caching data
+        Transferring data between different systems
 }
