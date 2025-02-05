@@ -1,14 +1,16 @@
 Things to know{
-    class,method def
-    runtime error and compile time errors with examples
-    Methods of object class.
+
 }
 
 Things to remember{
-    (Ref\55.png) the output will be kick and bike class (absract class is not printed even the method is empty in the child class that is bike because child class methods are more imp than parent class.)
+    POJO - Plain Old Java Objects.
+    ***(Ref\55.png) The output will be kick and bike class (absract class is not printed even the method is empty in the child class that is bike because child class methods are more imp than parent class.)
+    in Java,
+    We know that if you want to create the object or if you want to initialize the values, we can do that in constructor as well. Most of the time we do that, right?So if you want to assign the value initially when the object is created, we prefer to use constructor.
+        Setters are good,but then if you want to assign the values later,setter makes sense.But if you want to assign the values as soon as you get the object, you can use constructor.
 }
 Intro{
-    Java can be used for mobile developement, Web developement and Enterprice developement.
+    Java can be used for mobile developement, Web developement and Enterprise developement.
 
     Java is a strictly typed language.
 
@@ -20,7 +22,7 @@ Questions
 
     Which subsystem of the JVM is responsible for loading class files? ClassLoader.
 
-    What kind of error will be thrown if the main method is not found in the Java program? Convestion of data from lower to higher data types.
+    // What kind of error will be thrown if the main method is not found in the Java program? Convestion of data from lower to higher data types.
     
     default value assigned to boolean is False.
 
@@ -31,7 +33,7 @@ Questions
 
         char ch = 'a';
 
-        char result = (char)(ch + 1);
+        char result = (char)(ch + 1); //ch + 1 adds 1 to the numeric value of 'a' (97 + 1 = 98)   (char) casts the numeric result back to a character.
 
         System.out.println(result);
 
@@ -60,12 +62,13 @@ Compiler{
 }
 
 JDK,JRE,JVM (PPT\1.png){
+    Check this(Ref\64.png)
     To compile a code u need a tool that tool is JDK
     JDK converts ur code to bite code.
     U will write the java code  and compile it and run on machine(ie.JVM)
     JVM is a machine which runs the code.
     why we need a JVM? to make the java platform independent we went for a virual layer on top of it.
-    So most of the time ur code is dependent on some external files not the files that u have created, u might have used some in-built classes,libraries etc.
+    So most of the time ur code is dependent on some external files (not the files that u have created), u might have used some in-built classes,libraries etc.
     JVM and the extra libraries,in-built classes etc.. that we have used in our code combined called JRE(Java Run Time Environment).
     JRE is a Environment where you can run ur code. it also checks your byte code,validates.
     but ultimately ur code will run on JVM.
@@ -88,7 +91,7 @@ Public Static Void Main (String args[]){
     if you are making a non static method without reference u cannot access.So to make that happen we have to make a referece of that class and then  call the method with that referece that we created. (Ref\2.png)
 
     String args[] is arguments that we pass in main method.
-    args is just a name u acn keep anything there. (Ref\3.png)
+    args is just a name u can keep anything there. (Ref\3.png)(Ref\D36.java)
     arguments passes in String type.
     args[] is a array type variable which we can call as object of string.
     We use this String args[] when we want to pass information, even if we dont want to pass information we should include because it is a part of syntax.
@@ -112,6 +115,7 @@ Stack and Heap Memory{
 
 Instance Varibles{
     Check this. (PPT\3.png)
+    By default instance variables value is 0.
 }
 
 Memory Occupied by differernt variables{
@@ -303,6 +307,7 @@ Different type of Methods{
 }
 
 Class{
+    A Class is a blueprint for creating objects.
     Check this.(PPT\21.png)
 }
 
@@ -311,6 +316,8 @@ Method{
 }
 
 Object{
+    An object is a real-word entity that has state and behaviour. 
+    In other words, an object is a tangible thing that can be touch and feel, like a car or chair, etc. are the example of objects.
     Check this(PPT\23.png)
     Check this(PPT\24.png)
     Check this(PPT\25.png)
@@ -319,11 +326,11 @@ Object{
 }
 
 Static Block{
-    Check this(Ref\35.png) in the output it will print static 1st and constructor 2 times
+    Check this(Ref\35.png) in the out put it will print static 1st and constructor 2 times
     every time u create a object it will load the class 1st and objects are instantiated.
     the thing is class will be loaded once.
     JVM will have a special area named class loader it will have all the classes loaded.So when the 1st obj created it will load the class 1st and then the obj is created.So every time u load a class it will call the static block(Class loads only once so static block is also called once.)   
-    if you dont create the obj it will not call the class as well.(didn't get)
+    if you dont create the obj it not not call the class as well.(didn't get)
     but u can do it by using Class.forName("nameoftheclass i.e, mobile")
 }
 
@@ -355,7 +362,7 @@ Anonymous Object{
     we cannot re-use them
 }
 
-Inheritence{
+Inhertence{
     for inheritence u need a .class file not .java file.
     Reason why java dosen't support multiple inheritence is because it let say we have 3 classes A,B,C C is child and A,B are parents let say if both A and B have same methods and now when u create a object and try to call the method the java will be confused becasue it dont know who's method to use.
     Check this(PPT\27.png)(PPT\28.png)(PPT\29.png)(Ref\C.java)
@@ -458,6 +465,7 @@ Upcasting adnd Downcasting{
 }
 
 Wrapper Classes{
+    It converts primitive data types into objects.
     Primitive Dataypes dont extend object class.
     for every primitive type we are going to have class for it and that class extends object class
     autoboxing means primitive type to object type.
@@ -532,7 +540,8 @@ Annotations{
 
 Lambda Experssions{
     it is a shortcut way to create small functions that you can pass around like any other piece of data.
-    Check this(Ref\D15.java)(Ref\D16.java)
+    Check this(Ref\D15.java)(Ref\D16.java)(Ref\D25.java)
+    if u are having single line no need to specify return keyword also u can directly enter statement it will return it.
     It can be used only for funtional Interfaces.
     it saves the amount of files which you create.
     Of course the demo.java file will be quite heavy now,if you compare the file size before using Lambda expression,after using Lambda expression,the demo file size will increase,but it will not create a new file.
@@ -548,6 +557,7 @@ Exceptions{
     SQLExcetions IO exceptions are checked exceptions(Must handle the exceptions)
     Exceptions Hierachy Object->Throwable=>1.Error,2.Exceptions.
     Try Catch{
+        Runtime errors can be handled using try-catch blocks.
         (Ref\D17.java)
         (Ref\D18.java)
         if try is there there should be catch, but if u dont want to use catch u can use finally block also.
@@ -586,9 +596,106 @@ Threads{
     Scheduler it is some thing which tread will work for how much time and allocate the time to threads to work without flaws.
     U can set priorities to the thread by using setPriority
     to make the thread wait we can use sleep method in milli seconds (Ref\D22.java)
+    {
+        If ur are working with threads work with data which is immutable and if u think that there is a method which can make it thread safe.
+        Joins(){
+            In this example (Ref\D26.java) before joins() the output will be 0 because the print statement is called wihtout giving threads time, but we need 2000 according to our code, so this join() helps to wait for the threads to excecute and then it the Print statement will be printed(less than 2000).
+            but the output should be 2000 exactly, So here when these 2 threads are being called then there might be some incremations where both might collide only one will be incremented in them.
+            So to over come this we can add synchronize key word to the method.(Ref\D27.java)
+        }
+    }
+    States{
+        every time you create a new thread,that goes into a new state.
+        we also have something called a runnable state.Then we have a waiting state,or we can also say block state.
+        nd then the last state we have is dead.
+        So we have all the states available for the thread.
+        // when you create a new thread example in the code,if you remember when we said thread T1 equal a new thread,at that point it becomes into the new state.
+        // Now, the moment you say start,we have this method which is called start.
+        // So when you say start, it goes to a runnable state.So maybe we can say start.So when you say start it says it goes into a runnable state.
+        // Now there's a difference between runnable state and running.The difference is when your threadis actually running on the CPU, that is running state.But when your thread is executing and then it is waiting for the scheduler,that is into a runnable state.
+        // So example, when your thread is running with the help of run method, that is your running state.
+        // Now what if, while you are running this,and then maybe you want to keep a on hold with the help of sleep method.So that goes into waiting state.
+        // Now, apart from sleep, we also have a method like wait,which can make it go into waiting state.
+        // So when your thread is running state,you can also say wait,now wait, will take it to the waiting state,now, how will you come back?Now you will come back with the help of notify.The only thing is when you say notify,you will not come back to running state.You will go into runnable state.
+        // Now, whenever the scheduler is assigning you the task,or whenever schedule says it's your turn,at that point it'll go into running state.
+        // In fact, if your thread is runningand  if you want to keep it there, you can also say stop.
+        // There's also stop method available,but that is deprecated, actually don't stop threads.It'll create instability in your software.But yeah, once the thread work is over,it'll automatically go into stop state.
+        // You can also send a thread from the runnable to dead,even with the help of stop, even, you can do that.
+
+            Okay, so basically we have this option.So whenever you create a thread that is good,that goes into a new state,and then when you say start, it goes into enable.
+            Now, depending upon your availability of your CPU,that goes into running state.
+            Now while running it'll execute certain things and then if at that point, if you want to say, wait, you can do that with the help of sleep or you can do that with the help of wait.
+            Now, the only thing is when you say wait, you have to use a notify method to come back.
+            The only thing is when you say notify it'll not come back to running state it'll go to the runnable state.
+            So it goes from the waiting to runnable,from running, to waiting, waiting to runnable,that's the cycle it followsand then again from runnable to running state.These are the states available.
+    }    
 
 }
 
+Runnable{
+    Thread is a class which implements Runnable interface(which has run() method in it)
+    1st thing is u can extend threads and u can implement Runnable.
+    So lets say u have 2 classes A(already extended Thread class) , B and u want to extend B class also(u cannot because java dosent support multiple inheritence), So here u can use Runnable interface and implement it in class A with run() method so that it will staisfy the interface need aslo(that u have to define the interface methods in implemented class).
+    So basically whenever you want to create a Thread, we have two choice.
+    You can extend a Thread class or you can implement a Runnable interface.
+    The only thing is this Runnable interface will not have the Thread methods.
+    In that case, you need to create a separate Thread objectand then we can use these features.
+    Check this example(Ref\D23.java) changing this into lamdaexpressions (Ref\D24.java)
+
+}
+
+Collection{
+    collection API -> concept
+    Collection -> Interface
+    Collections -> Class
+    Collections belongsto util package.
+    API simply means a library or some feature,which you can simply use it.You don't have to implement them.
+    Collections work with the wrapper classes.
+    Check this (Ref\65.png) Collection is a interface and List Queue Set are also interfaces that implemnt Collection and individuallu these interfaces have their own class implementation.
+    and on top of Collection we have Itreator top most interface.
+    We can convert collection into array.
+    We dont have indexing for collection interface.
+    We can directly print collection without loop.
+    By default collection api works with objects.
+    List/Array List{
+        So to specify the datatype that u are working with u can use angluar barckets<>.
+        and on of the reason to sepcify the data type is lets say in that Array list u added number in "" then it will show error (Run time Error)****
+        So to over come it u have to sepcify the data type then it will show the (Compile time error)***
+        if u want to work with indexing u can use List in place of Collection(Check this (Ref\D28.java))
+        to sort List(Ref\D31.java)
+    }
+    Set/Hash Set/Linked HashSet{
+        to have unique values in list we will use Set.
+        Set will not give u the output in sorted format and have no index value.
+        So get sorted values u ccan use TreeSet in place of HashSet
+        Concept of Iterator Interface is in this Down code.
+        Check this(Ref\D29.java)
+    }
+    Map{
+        Map is a collection of Key, Value pairs.
+        HashMap and HashTable both are alomost same but hash table is synchronized.(when u r working with mutiple threads u can use hashtable)
+        Keys are unique,So if u want to update the value it will take the latest one.
+        Keys are actually a set and values are the list.
+        We use put instead of add is put means try. let say u already have the key then u can replace it.
+        it not follow the sequence.
+        Check this(Ref\D30.java)
+    }
+    Compartor
+    {
+        Comparator is basically a interface that help u make ur own logic in Sorting.
+        In comparator interface u will have compare method. int compare(T,T) where T is the type.
+        So in generall sorting involves swapping. So to our logic if it satisfies it will swap(return 1) and if not it will not swap(return -1).
+
+        Question: 72,31,29,43 So now u ahve to sort the values using the last digit i.e, 31,72,43,29.(Ref\D32.java)
+        Sorting students based on their ages (Ref\D33.java) lambda expressions used (Ref\D35.java)
+    }
+    #####Comparable{
+        If you want to give a power to the class itself to compare itself or to compare its object to itself.
+        by default Integer class by default implements comparable class So by default sort works with integers.
+        Check this(Ref\D34.java).
+
+    }
+}
 
 Aggregation{
     Checkthis(Ref\62.png)(Ref\63.png)
@@ -621,4 +728,50 @@ Serialization and Deserialization{
         Creating deep copies of objects
         Caching data
         Transferring data between different systems
+}
+
+JDBC{
+    JDBC is a API, it is a part of Java Developemnt Kit.
+    File-->Project Structure-->Libraries-->add that Jar file.
+    in SRC create class file in main method add
+    1. import package
+    2. Connection con = DriverManager.getConnnection(url,uname,pass);
+
+        String url= "jdbc:postgresql:localhost:5432/demo";
+                    //"jdbc:DBsoftware/localhost:portnum of that DB/DB name";
+        String uname="postgres"; //uname u have
+        String pass="0000"; //pass u gave
+        S.O.P("Connection Established");
+    3.Create Statement:
+
+}
+
+Hibernate{
+    ORM frame work(Object Relational Mapping)
+    create a project in maven and add jarfile(Postgresql) and hibernate dependencies in POM file
+
+}
+
+
+Spring{
+    Beans are the basically the objects that are managed by Spring Framework.
+    The num of beans u created the num of objects are created.even if u create 2 beans for same class it will create object for that.
+    Scope {
+        it is a type where we can kind of decide the number of objects can be created whn getBeans is called. 
+        Prototype--> new obj every time getBean is called,obj will be created whn u say getBean only. 
+        Singelton--> same obj is called.it will create the obj by default.
+    }
+    Setter Injections {
+        (<property name="age" value="21"></property>)  variable name and value for primitve datatypes, even the variable is private.
+        So here basically it will 1st create the obj,then call setter method.
+    }
+    Reference Attribute 
+    {
+        same as Setter Injection but for non-Primitive data type.
+        In place of value u have to use ref and its name should be equal to that id of that bean.
+    }    
+    Constructor Injection{
+        Same like Setter Injections and Ref Attribute but used for constructors
+    }
+    
 }
